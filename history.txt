@@ -1,0 +1,459 @@
+ 1  ip addr
+    2  ps -ef|grep jenkins
+    3  ls -a
+    4  ls
+    5  exit
+    6  git clone https://github.com/amitvashisttech/devcloud-dxc-30Mar2021.git
+    7  cd devcloud-dxc-30Mar2021/
+    8  cd 02-App-Code/
+    9  cd petclinic-code/
+   10  ls -ltr
+   11  mvn --version
+   12  mvn clean
+   13  mvn complile
+   14  mvn test
+   15  mvn complile
+   16  mvn test
+   17  mvn package
+   18  ls -ltr
+   19  mvn clean
+   20  mvn complile
+   21  mvn compile
+   22  mvn test
+   23  mvn package
+   24  ls -ltr
+   25  ls -a
+   26  ls
+   27  cd target/
+   28  ls -ltr
+   29  cd ..
+   30  cd
+   31  ls
+   32  ls -a
+   33  cd devcloud-dxc-30Mar2021/
+   34  cd 02-App-Code/petclinic-code/
+   35  cd
+   36  exit
+   37  ls -a
+   38  exit
+   39  ls
+   40  cd devcloud-dxc-30Mar2021/
+   41  git pull
+   42  frre -m
+   43  free -m
+   44  git pull
+   45  cd 03-Docker/
+   46  ls
+   47  cd 00-Setup/
+   48  ls -a
+   49  install-docker.sh
+   50  ls
+   51  cd devcloud-dxc-30Mar2021/
+   52  cd 03-Docker/
+   53  cd 00-Setup/
+   54  ./install-docker.sh
+   55  docker run busybox ech "Welcome to the world of Docker. "
+   56  docker run busybox ech "Welcome to the world of Docker -Test2 "
+   57  docker run busybox echo "Welcome to the world of Docker -Test2 "
+   58  docker run busybox echo "Welcome to the world of Docker. "
+   59  git pull
+   60  docker version
+   61  docker images
+   62  docker pull ubuntu
+   63  docker images
+   64  docker pull ubuntu:16.04
+   65  docker images
+   66  docker pull amitvashist7/k8s-tiny-web
+   67  docker images
+   68  docker pull amitvashist7/k8s-tiny-web:2
+   69  docker images
+   70  docker pull amitvashist7/apache-ex4
+   71  docker images
+   72  docker ps
+   73  docker ps -a
+   74  docker images
+   75  docker ps -|
+   76  docker ps
+   77  docker ps -i
+   78  docker ps -l
+   79  docker inspect
+   80  docker inspect $(docker ps -l -q)
+   81  docker inspect --format '{{.Name}} {{.state running}}
+   82  docker inspect --format '{{.Name}} {{.state running}}'
+   83  docker run -it ubuntu
+   84  docker run -itd ubuntu
+   85  docker ps
+   86  docker run -itd ubuntu:16.04
+   87  docker ps
+   88  docker run -itd --name abc-01 ubuntu:16.04
+   89  docker ps
+   90  docker ps -a
+   91  history
+   92  docker run -it ubuntu
+   93  docker ps -a
+   94  docker run -itd --name test-1 ubuntu:16.04
+   95  docker run -itd --name app-A ubuntu:16.04
+   96  docker run -itd --name app-Ab ubuntu:16.04
+   97  docker run -itd --name app-b1 ubuntu:16.04
+   98  docker ps -a
+   99  docker stop app-b1
+  100  docker ps -a
+  101  docker kill app-A
+  102  docker ps -a
+  103  docker ps -q
+  104  docker ps -a
+  105  docker kill $(docker ps -q)
+  106  docker ps -a
+  107  docker rm $(docker ps -q)
+  108  docker rm$(docker ps -q)
+  109  docker rm$(docker ps -aq)
+  110  docker rm $(docker ps -aq)
+  111  docker ps -a
+  112  docker run -itd --name app-B ubuntu:16.0
+  113  docker run -itd --name app-B ubuntu:16.04
+  114  docker ps -a
+  115  docker ps
+  116  docker inspect app-B
+  117  docker run -itd  ubuntu:16.04
+  118  docker ps -a
+  119  docker inspect 7352e10fa8ee
+  120  history
+
+  122  cd
+  123  cd devcloud-dxc-30Mar2021/
+  124  git pull
+  125  ls
+  126  cd 03-Docker/
+  127  ls
+  128  cd 02-Dockerfile/
+  129  ls
+  130  ./apache.sh
+  131  vim Dockerfile
+  132  ls
+  133  vim Dockerfile
+  134  docker build -t myapache:v1 .
+  135  ls
+  136  vim Dockerfile
+  137  docker build -t myapache:v1 .
+  138  ls
+  139  docker image
+  140  docker images
+  141  docker run -d --name test-apache-node-1 myapache:v1
+  142  docker ps
+  143  history
+
+
+
+
+144  cd..
+  145  cd ..
+  146  git pull
+  147  cd 03-Docker/
+  148  ls
+  149  cd 02-Dockerfile/
+  150  ls
+  151  cd apache/
+  152  ls
+  153  cat Dockerfile
+  154  docker build -t myapache:v2 .
+  155  ls
+  156  docker images
+  157  docker build -t myapache:v2 .
+  158  docker images
+  159  docker run -d --name test-apache-node-2 myapache:v2
+  160  ls
+  161  vim Dockerfile
+  162  vim Dockerfile vim index.html
+  163  ls
+  164  git pull
+  165  cd ..
+  166  git pull
+  167  cd ..
+  168  git pull
+  169  cd 03-Docker/
+  170  cd -2
+  171  cd 02-Dockerfile/
+  172  ls
+  173  cd apache/
+  174  ls
+  175  vim index.html
+  176  ls
+  177  cat Dockerfile
+  178  docker build -t myapache:v2 .
+  179  ls
+  180  docker images
+  181  docker run -d --name test-apache-node-2 myapache:v2
+  182  docker inspect myapache:v2
+  183  docker ps
+  184  docker inspect  test-apache-node-2
+  185  curl 172.17.0.5
+  186  ls
+  187  vim Dockerfile
+  188  ls
+  189  docker images
+  190  netstat -tulnp
+  191  systemctl status docke
+  192  systemctl status docker
+  193  docker build -t myapache:v3 .
+  194  docker ps
+  195  docker run -d --name test-apache-node-3 myapache:v4
+  196  docker build -t myapache:v4
+  197  docker build -t myapache:v4 .
+  198  docker run -d --name test-apache-node-4 myapache:v4
+  199  docker ps
+  200  docker inspect test-apache-node-5
+  201  telnet 172.17.0.8 3306
+  202  telnet 172.17.0.8 8081
+  203  telnet 172.17.0.8 80
+  204  docker ps
+  205  ip addr
+  206  docker run -d --name test-apache-node-6 -p 8081:80  myapache:v3
+  207  docker ps
+  208  docker run -d --name test-apache-node-7 -P  myapache:v3
+  209  docker run -d --name test-apache-node-8 -P  myapache:v2
+  210  docker run -d --name test-apache-node-9 -P  myapache:v4
+  211  docker ps
+  212  netstat -tulnp
+  213  systemctl status docker
+  214  docker run -d --name test-apache-node-10 -p 8085:80  myapache:v2
+  215  docker ps
+  216  history
+
+
+  217  docker ps
+  218  docker login
+  219  docker push 1201docker/myapache:v2
+  220  docker push
+  221  docker push --help
+  222  docker push--help
+  223  docker push  --help
+  224  docker tag 517aa14fc8d9 1201docker/myapache:v4
+  225  docker ps
+  226  docker tag 517aa14fc8d9 1201docker/myapache:v4
+  227  docker images
+  228  docker tag bf4dbe5f1429 1201docker/myapache:v4
+  229  docker push 1201docker/myapache:v4
+  230  cd
+  231  cd devcloud-dxc-30Mar2021/
+  232  git pull
+  233  ls
+  234  cd 03-Docker/
+  235  ls
+  236  cd
+  237  cd devcloud-dxc-30Mar2021/
+  238  ls
+  239  git pull .
+  240  git pull
+  241  ls
+  242  git pull
+  243  git pull
+  244  git stash
+  245  git pull
+  246  git clean -df
+  247  git pull
+  248  ls
+  249  cd 03-Docker/
+  250  ls
+  251  cd 04-DockerCompose/
+  252  ls
+  253  cd 01-NginxApp/
+  254  ls
+  255  vim docker-compose.yaml
+  256  ls
+  257  docker-compose up -d
+  258  docker ps
+  259  cd
+  260  ls
+  261  cd devcloud-dxc-30Mar2021/03-Docker/04-DockerCompose/ls
+  262  cd devcloud-dxc-30Mar2021/03-Docker/04-DockerCompose/
+  263  ls
+  264  cd 02-MultiApp/
+  265  ls
+  266  docker ps
+  267  docker images
+  268  vim docker-compose.yaml
+  269  docker-compose up -d
+  270  docker ps
+  271  docker ps -a
+  272  docker-compose rm
+  273  docker ps -a
+  274  docker-compose up -d
+  275  docker-compose ps
+  276  docker-compose --help
+  277  history
+
+
+https://github.com/amitvashisttech/devcloud-dxc-30Mar2021
+
+
+
+
+
+
+
+278  docker-compose ps
+  279  cd
+  280  cd devcloud-dxc-30Mar2021/
+  281  cd 03-Docker/
+  282  ls
+  283  cd 04-DockerCompose/
+  284  ls
+  285  cd ..
+  286  git pull
+  287  ls
+  288  cd 03-Docker/04-DockerCompose/
+  289  ls
+  290  cd 04-PetclinicApp/
+  291  ls
+  292  cd ..
+  293  ls
+  294  cd 03-MyCustomApp/
+  295  ls
+  296  vim index.html
+  297  vim docker-compose.yaml
+  298  ls
+  299  docker-compose up -d
+  300  docker-compose up -d --build
+  301  docker-compose up -d -build
+  302  docker-compose up -d --build
+  303  vim docker-compose.yaml
+  304  docker-compose up -d --build
+  305  docker-compose up --build
+  306  docker-compose up -d --build
+  307  docker ps
+  308  cat docker-compose.yaml
+  309  docker-compose up -d --build
+  310  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  311  sudo chmod +x /usr/local/bin/docker-compose
+  312  docker-compose up -d --build
+  313  docker-compose rm
+  314  docker-compose rmi
+  315  docker ps
+  316  docker-compose ps
+  317  docker-compose kill
+  318  docker ps
+  319  docker-compose kill
+  320  docker-compose ps
+  321  vim docker-compose.yaml
+  322  docker-compose up -d --build
+  323  docker-compose  ps
+  324  cp -rf 03-MyCustomApp 04-PetclinicApp
+  325  cd ..
+  326  cd 04-PetclinicApp/
+  327  ls
+  328  ls -ltr
+  329  rm -rf index.html
+  330  ls
+  331  cat docker-compose.yaml
+  332  cat Dockerfile
+  333  ll
+  334  docker-compose up -d --build
+  335  ls
+  336  cp -rf /root/.jenkins/workspace/Petclinic-Pipeline/02-App-Code/petclinic-code/target/petclinic.war .
+  337  cp -rf /.jenkins/workspace/Petclinic-Pipeline/02-App-Code/petclinic-code/target/petclinic.war .
+  338  cp -rf /root/devops-stackstrom-dxc-2021-Jan-04/04-Docker/03-DockerCompose/05-Petclinic-Deploy/* .
+  339  ls
+  340  cd ..
+  341  ls
+  342  cd ..
+  343  git pull
+  344  ls
+  345  cd
+  346  exit
+  347  ls
+  348  cd devcloud-dxc-30Mar2021/
+  349  ls
+  350  cd 03-Docker/
+  351  cd 04-DockerCompose/
+  352  ls
+  353  cd 03-MyCustomApp/
+  354  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  355  sudo chmod +x /usr/local/bin/docker-compose
+  356  docker-compose --version
+  357  ls
+  358  docker-compose up -d --build
+  359  cd ..
+  360  cp -rf 03-MyCustomApp 04-PetclinicApp
+  361  cd 04-PetclinicApp/
+  362  ls
+
+
+
+
+
+
+ 378  cp -rf /home/vagrant/.jenkins/workspace/Pipeline-Petclinic-
+ 379  cp -rf /home/vagrant/.jenkins/workspace/Pipeline-Petclinic-
+ 380  ls -ltr                                                    
+ 381  ls                                                         
+ 382  ll                                                         
+ 383  docker-compose up -d --build                               
+ 384  docker ps                                                  
+ 385  docker-compose kill                                        
+ 386  docker ps                                                  
+ 387  docker-compose ps                                          
+ 388  ls                                                         
+ 389  > petclinic.war                                            
+ 390  docker ps                                                  
+ 391  docker ps -s                                               
+ 392  docker ps -a                                               
+ 393  docker-compose up -d --build                               
+ 394  docker ps -a                                               
+ 395  docker-compose kill                                        
+ 396  docker ps -a                                               
+ 397  > petclinic.war                                            
+ 398  docker rm  $(docker ps -qa)                                
+ 399  docker ps -a                                               
+ 400  cp -rf ../../03-Docker/04-DockerCompose/04-PetclinicApp/Doc
+ 401  cd ..                                                      
+ 402  cd 02-App-Code/                                            
+ 403  ls                                                         
+ 404  cd petclinic-code/                                         
+ 405  cp -rf ../../03-Docker/04-DockerCompose/04-PetclinicApp/Doc
+ 406  ls                                                         
+ 407  cp -rf ../../03-Docker/04-DockerCompose/04-PetclinicApp/doc
+ 408  ls                                                         
+ 409  cat Dockerfile                                             
+ 410  ls                                                         
+ 411  cd ..                                                      
+ 412  ls                                                         
+ 413  cd ..                                                      
+ 414  ls                                                         
+ 415  git pull                                                   
+ 416  git clean -df                                              
+ 417  git pull                                                   
+ 418  git checkout Jenkins                                       
+ 419  ls                                                         
+ 420  cd JenkinPipeline/                                         
+ 421  ls                                                         
+ 422  cp -rf 05-TestReports-Pipeline 06-PreProd-Pipeline         
+ 423  ls                                                         
+ 424  cp -rf 06-PreProd-Pipeline Jenkinsfile                     
+ 425  cd ../                                                     
+ 426  ls                                                         
+ 427  docker ps -a                                               
+ 428  cd                                                         
+ 429  ls                                                         
+ 430  exit                                                       
+ 431  cd devcloud-dxc-30Mar2021/                                 
+ 432  ls                                                         
+ 433  cd JenkinPipeline/                                         
+ 434  git check out main                                         
+ 435  git checkot main                                           
+ 436  git checkout main                                          
+ 437  git commit -m "branch save"                                
+ 438  git checkout main                                          
+ 439  ls                                                         
+ 440  cd ..                                                      
+ 441  ls                                                         
+ 442  cd 02                                                      
+ 443  cd 02-App-Code/                                            
+ 444  cd petclinic-code/                                         
+ 445  ls                                                         
+ 446  cat docker-compose.yaml                                    
+ 447  cat Dockerfile                                             
+ 448  cd ..                                                      
+ 449  ls                                                         
+ 450  cd ..                                                      
+ 451  ls                                                         
+ 452  history                                                    
